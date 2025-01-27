@@ -18,7 +18,7 @@ app.use(cors());
 
 // CORS Configuration
 const corsOptions = {
- origin: "https://msg-front.vercel.app/", // Your frontend domain
+ origin: "https://msg-front.vercel.app", // Your frontend domain
  methods: "GET,POST,PUT,DELETE", // Allow specific HTTP methods
    allowedHeaders: "Content-Type,Authorization", // Allow specific headers
  };
