@@ -9,6 +9,7 @@ function App() {
     message: "",
   });
   const [response, setResponse] = useState("");
+  axios.defaults.withCredentials=true;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +19,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/send-message", formData);
+      const res = await axios.post("https://msg-api-five.vercel.app/send-message", formData);
       setResponse(res.data.message);
     } catch (error) {
       setResponse("Error sending message");
