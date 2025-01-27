@@ -9,21 +9,11 @@ function App() {
     message: "",
   });
   const [response, setResponse] = useState("");
-  axios.defaults.withCredentials=true;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
-  app.use(cors(
-    {
-    origin:["https://msg-front.vercel.app"],
-    methods:["POST","GET"],
-    credentials:true
-    }
-)); 
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
