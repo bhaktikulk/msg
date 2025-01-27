@@ -25,6 +25,10 @@ app.use(cors());
 // app.use(cors(corsOptions));
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+    res.json("Hello");
+})
+
 // Root endpoint
 app.get("/", (req, res) => {
   res.send("Welcome to the Twilio Message Sending API!");
