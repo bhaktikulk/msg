@@ -16,6 +16,15 @@ function App() {
     setFormData({ ...formData, [name]: value });
   };
 
+  app.use(cors(
+    {
+    origin:["https://msg-front.vercel.app"],
+    methods:["POST","GET"],
+    credentials:true
+    }
+)); 
+
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
