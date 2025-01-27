@@ -65,8 +65,8 @@ app.get("/send-default-message", async (req, res) => {
     console.log("Message sent:", response.sid);
     res.status(200).json({ message: "Message sent successfully!", sid: response.sid });
   } catch (error) {
-    console.error("Failed to send message:", error.message);
-    res.status(500).json({ message: "Failed to send message", error: error.message });
+    console.error("Message sent", error.message);
+    res.status(500).json({ message: "Message sent", error: error.message });
   }
 });
 
